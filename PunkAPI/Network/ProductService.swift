@@ -21,7 +21,7 @@ enum APIError: Error {
 
 class ProductService {
     
-    func getProduct(pageIndex: Int, completion: @escaping (_ error: Error?, _ productList:[ProductView]) -> Void) {
+    func getProduct(pageIndex: Int, completion: @escaping (_ error: Error?, _ productList:[Product]) -> Void) {
         
         let baseUrl = "https://api.punkapi.com/v2/beers"
         let method: HTTPMethod = .get
@@ -48,31 +48,15 @@ class ProductService {
                 return
             }
             
-            let vms = products.compactMap {ProductView(product: $0)}
-            completion(nil, vms)
+            completion(nil, products)
         }
     }
         
-
-    /*self.request(PunkAPIMethod.getProduct) {[weak self] (data, error) in
-            guard let data = data else {
-                completion(error, [])
-                return
-            }
-            
-            guard let products = self?.parseProductResponse(data) else {
-                completion(APIError.jsonParsingError, [])
-                return
-            }
-            let vms = products.compactMap {ProductView(product: $0)}
-            completion(nil, vms)
-        }
-    }*/
-    
     func parseProductResponse(_ data: Data) -> [Product]? {
         do {
             let decoder = JSONDecoder()
             let productList = try decoder.decode([Product].self, from: data)
+            print(productList)
             return productList
         }
         catch {

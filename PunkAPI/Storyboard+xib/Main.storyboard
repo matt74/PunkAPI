@@ -97,7 +97,18 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="BxH-LT-MPl">
-                        <barButtonItem key="backBarButtonItem" title=" " id="cYv-xQ-TGH"/>
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="QwL-vv-esJ">
+                            <rect key="frame" x="207" y="22" width="0.0" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="inlineLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vMa-Hy-fTY">
+                                    <rect key="frame" x="-175" y="-24" width="349" height="47"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgr-ar-tAF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,4 +116,7 @@
             <point key="canvasLocation" x="1427" y="24"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="inlineLogo" width="1500" height="500"/>
+    </resources>
 </document>

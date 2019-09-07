@@ -9,10 +9,10 @@
 import Foundation
 
 struct Product : Codable {
-    let name: String
-    let imageUrl: String
-    let description: String
-    let tagline: String
+    var name: String
+    var imageUrl: String
+    var description: String
+    var tagline: String
     
     enum CodingKeys: String, CodingKey {
         case name

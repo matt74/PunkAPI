@@ -11,11 +11,11 @@
 		390E4EA52322CD780010232A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 390E4EA42322CD780010232A /* Main.storyboard */; };
 		390E4EAC2322D7460010232A /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E4EAB2322D7460010232A /* CustomCell.swift */; };
 		390E4EAF2322D89C0010232A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E4EAE2322D89C0010232A /* Product.swift */; };
-		390E4EB12322D9250010232A /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E4EB02322D9250010232A /* ProductView.swift */; };
 		390E4EBC2322E9C10010232A /* ProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E4EBB2322E9C10010232A /* ProductService.swift */; };
+		390E4EBE232398B80010232A /* RealmProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390E4EBD232398B80010232A /* RealmProduct.swift */; };
+		390E4ECA2323E0E50010232A /* default.realm in Resources */ = {isa = PBXBuildFile; fileRef = 390E4EC92323E0E50010232A /* default.realm */; };
 		39205A342322C7970010CA16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39205A332322C7970010CA16 /* AppDelegate.swift */; };
 		39205A362322C7970010CA16 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39205A352322C7970010CA16 /* ListViewController.swift */; };
-		39205A3C2322C7970010CA16 /* PunkAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 39205A3A2322C7970010CA16 /* PunkAPI.xcdatamodeld */; };
 		39205A3E2322C7980010CA16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39205A3D2322C7980010CA16 /* Assets.xcassets */; };
 		39205A412322C7980010CA16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39205A3F2322C7980010CA16 /* LaunchScreen.storyboard */; };
 		39205A4C2322C7980010CA16 /* PunkAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39205A4B2322C7980010CA16 /* PunkAPITests.swift */; };
@@ -48,13 +48,13 @@
 		390E4EA42322CD780010232A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		390E4EAB2322D7460010232A /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		390E4EAE2322D89C0010232A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		390E4EB02322D9250010232A /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		390E4EB92322DCC10010232A /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		390E4EBB2322E9C10010232A /* ProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductService.swift; sourceTree = "<group>"; };
+		390E4EBD232398B80010232A /* RealmProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProduct.swift; sourceTree = "<group>"; };
+		390E4EC92323E0E50010232A /* default.realm */ = {isa = PBXFileReference; lastKnownFileType = file; name = default.realm; path = PunkAPI/default.realm; sourceTree = "<group>"; };
 		39205A302322C7970010CA16 /* PunkAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunkAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39205A332322C7970010CA16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39205A352322C7970010CA16 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		39205A3B2322C7970010CA16 /* PunkAPI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PunkAPI.xcdatamodel; sourceTree = "<group>"; };
 		39205A3D2322C7980010CA16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39205A402322C7980010CA16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39205A422322C7980010CA16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				390E4EAE2322D89C0010232A /* Product.swift */,
-				390E4EB02322D9250010232A /* ProductView.swift */,
+				390E4EBD232398B80010232A /* RealmProduct.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +146,7 @@
 		39205A272322C7970010CA16 = {
 			isa = PBXGroup;
 			children = (
+				390E4EC92323E0E50010232A /* default.realm */,
 				39205A322322C7970010CA16 /* PunkAPI */,
 				39205A4A2322C7980010CA16 /* PunkAPITests */,
 				39205A552322C7980010CA16 /* PunkAPIUITests */,
@@ -175,7 +176,6 @@
 				390E4EA72322D04C0010232A /* Storyboard+xib */,
 				39205A3D2322C7980010CA16 /* Assets.xcassets */,
 				39205A422322C7980010CA16 /* Info.plist */,
-				39205A3A2322C7970010CA16 /* PunkAPI.xcdatamodeld */,
 			);
 			path = PunkAPI;
 			sourceTree = "<group>";
@@ -331,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39205A412322C7980010CA16 /* LaunchScreen.storyboard in Resources */,
+				390E4ECA2323E0E50010232A /* default.realm in Resources */,
 				39205A3E2322C7980010CA16 /* Assets.xcassets in Resources */,
 				390E4EA52322CD780010232A /* Main.storyboard in Resources */,
 			);
@@ -458,13 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39205A3C2322C7970010CA16 /* PunkAPI.xcdatamodeld in Sources */,
 				39205A362322C7970010CA16 /* ListViewController.swift in Sources */,
 				390E4EAC2322D7460010232A /* CustomCell.swift in Sources */,
 				39205A342322C7970010CA16 /* AppDelegate.swift in Sources */,
-				390E4EB12322D9250010232A /* ProductView.swift in Sources */,
 				390E4EAF2322D89C0010232A /* Product.swift in Sources */,
 				390E4EBC2322E9C10010232A /* ProductService.swift in Sources */,
+				390E4EBE232398B80010232A /* RealmProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,19 +791,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		39205A3A2322C7970010CA16 /* PunkAPI.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				39205A3B2322C7970010CA16 /* PunkAPI.xcdatamodel */,
-			);
-			currentVersion = 39205A3B2322C7970010CA16 /* PunkAPI.xcdatamodel */;
-			path = PunkAPI.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 39205A282322C7970010CA16 /* Project object */;
 }

@@ -10,7 +10,6 @@ target 'PunkAPI' do
   pod 'Alamofire', '~> 4.7'
   pod 'RealmSwift'
   pod 'SDWebImage', '~> 5.0'
-  pod 'FSnapChatLoading'
 
   target 'PunkAPITests' do
     inherit! :search_paths

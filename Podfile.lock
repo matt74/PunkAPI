@@ -15,7 +15,6 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Alamofire (4.9.0)
-  - FSnapChatLoading (1.0.5)
   - Realm (3.17.3):
     - Realm/Headers (= 3.17.3)
   - Realm/Headers (3.17.3)
@@ -28,7 +27,6 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - Alamofire (~> 4.7)
-  - FSnapChatLoading
   - RealmSwift
   - SDWebImage (~> 5.0)
 
@@ -36,7 +34,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Alamofire
-    - FSnapChatLoading
     - Realm
     - RealmSwift
     - SDWebImage
@@ -44,11 +41,10 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
-  FSnapChatLoading: c06f4e0a4a4ec1eba8f2fef46f8c1653cc79b2ef
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
 
-PODFILE CHECKSUM: 24e62f40eb183e72074fc1426064920bbe972478
+PODFILE CHECKSUM: 6c1ab7a82663b5b0607b403d2c3131761458e3ac
 
 COCOAPODS: 1.5.3

@@ -56,7 +56,6 @@ class ProductService {
         do {
             let decoder = JSONDecoder()
             let productList = try decoder.decode([Product].self, from: data)
-            print(productList)
             return productList
         }
         catch {

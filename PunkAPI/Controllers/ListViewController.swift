@@ -9,13 +9,11 @@
 import UIKit
 import Foundation
 import SDWebImage
-import FSnapChatLoading
 import RealmSwift
 
 class ListViewController: UITableViewController {
     
     let productService = ProductService()
-    let loadingView = FSnapChatLoadingView()
 
     var pageIndex: Int = 1
     var reachMax: Bool = false
@@ -36,23 +34,23 @@ class ListViewController: UITableViewController {
         // Setup the Search Controller
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = true
-        searchController.searchBar.placeholder = "Search beers"
+        searchController.searchBar.placeholder = "Search beer"
         navigationItem.searchController = searchController
         definesPresentationContext = true
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         
         tableView.tableFooterView = UIView()
         
-        self.title = "PunkAPI"
-        
-        //loadProducts(withPageIndex: pageIndex)
-       
+        // Load local data with Realm
         cleanRealm()
-        
         openRealm()
-        
         fetchLocalData()
-
+        
+        // Load real data from PunkAPI
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.productList.removeAll()
+            self.loadProducts(withPageIndex: self.pageIndex)
+        }
     }
     
     func cleanRealm() {
@@ -68,9 +66,7 @@ class ListViewController: UITableViewController {
         for URL in realmURLs {
             do {
                 try FileManager.default.removeItem(at: URL)
-            } catch {
-                print("delete error")
-            }
+            } catch {}
         }
     }
     
@@ -90,8 +86,6 @@ class ListViewController: UITableViewController {
                 // Catch fires here, with an NSError being thrown
                 print("error occurred, here are the details:\n \(error)")
             }
-        }else{
-            print("file already exist")
         }
     }
     
@@ -125,18 +119,16 @@ class ListViewController: UITableViewController {
         
         isLocalData = true
         productList = localList
-        
+
     }
     
     @objc func loadProducts(withPageIndex: Int) {
         
         isLocalData = false
         
-        loadingView.show(view: self.view, color: UIColor.black)
-        
         self.productService.getProduct(pageIndex: pageIndex) {[weak self] (error, products) in
             guard let strongSelf = self else { return }
-            strongSelf.loadingView.hide()
+            
             if error != nil {
                 self?.reachMax = true
                 return

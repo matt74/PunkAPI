@@ -1,0 +1,6 @@
+framework module Pods_PunkAPITests {
+  umbrella header "Pods-PunkAPITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

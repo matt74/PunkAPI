@@ -10,7 +10,7 @@ List and show beer details using [Punk API](https://punkapi.com).
 - Add a search bar to find a specific beer with his name. (Search bar appear by scrolling TableView to the top)
 
 ## Running the Project
-Xcode deployment target 12.4
+Xcode deployment target 12.4.
 Pods already added to the repo, so you don't need to have cocoapods installed nor run pod install
 
 - Open `PunkAPI.xcworkspace`

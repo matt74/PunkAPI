@@ -21,6 +21,8 @@ Pods already added to the repo, so you don't need to have cocoapods installed no
 - [Alamofire](https://github.com/Alamofire/Alamofire) - HTTP networking library.
 - [RealmSwift](https://github.com/realm/realm-cocoa) - Realm is a mobile database that runs directly inside phones.
 - [SDWebImage](https://github.com/SDWebImage/SDWebImage) - Image loading and caching library.
+- [ARSLineProgress](https://github.com/soberman/ARSLineProgress) - activity indicator.
+
 
 ## Screenshots
 

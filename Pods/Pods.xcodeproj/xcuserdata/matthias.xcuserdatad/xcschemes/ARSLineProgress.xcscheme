@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BFFD9FA1932889F1D17CDA5F5D17771E"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "5ED0757B47C592984BF7BE062FE59E08"
+               BlueprintName = "ARSLineProgress"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SDWebImage.framework">
+               BuildableName = "ARSLineProgress.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -10,6 +10,7 @@ import UIKit
 import Foundation
 import SDWebImage
 import RealmSwift
+import ARSLineProgress
 
 class ListViewController: UITableViewController {
     
@@ -126,9 +127,11 @@ class ListViewController: UITableViewController {
         
         isLocalData = false
         
+        ARSLineProgress.show()
+        
         self.productService.getProduct(pageIndex: pageIndex) {[weak self] (error, products) in
             guard let strongSelf = self else { return }
-            
+            ARSLineProgress.hide()
             if error != nil {
                 self?.reachMax = true
                 return

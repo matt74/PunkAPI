@@ -24,4 +24,4 @@ Pods already added to the repo, so you don't need to have cocoapods installed no
 
 ## Screenshots
 
-![Alt text](Screenshots/ListView.png?raw=true "Optional Title")
+![Alt text](Screenshots/ListView.png?raw=true "ListView")
